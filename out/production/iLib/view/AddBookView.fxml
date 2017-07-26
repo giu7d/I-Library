@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.collections.FXCollections?>
+<AnchorPane prefHeight="480.0" prefWidth="720.0" styleClass="singupBG" stylesheets="@../assets/Style.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.AddBookController">
+
+    <children>
+        <Label fx:id="closeButton" onMouseClicked="#closeAct" prefHeight="25.0" prefWidth="25.0" text="x">
+            <cursor>
+                <Cursor fx:constant="HAND" />
+            </cursor>
+        </Label>
+      <Pane layoutX="23.0" layoutY="48.0" prefHeight="437.0" prefWidth="670.0" styleClass="singupPane">
+         <children>
+            <TextField fx:id="titleField" layoutX="204.0" layoutY="74.0" promptText="Titulo" styleClass="textfieldLightBox" />
+            <TextField fx:id="autField" layoutX="204.0" layoutY="136.0" promptText="Autor" styleClass="textfieldLightBox" />
+            <!--<ComboBox layoutX="203.0" layoutY="318.0" prefHeight="38.0" prefWidth="261.0" promptText="Estado" styleClass="textfieldLightBox">
+                <items>
+                    <FXCollections fx:factory="observableArrayList">
+                        <String value="1" fx:value="Ativo" />
+                        <String value="0" fx:value="Inativo" />
+                    </FXCollections>
+                </items>
+            </ComboBox>-->
+            <Button fx:id="cancelButton" layoutX="205.0" layoutY="380.0" mnemonicParsing="false" onMouseClicked="#backAct" prefHeight="57.0" prefWidth="130.0" styleClass="blueButton" text="Cancelar">
+               <cursor>
+                  <Cursor fx:constant="OPEN_HAND" />
+               </cursor></Button>
+            <Button fx:id="addButton" onMouseClicked="#modAct" layoutX="334.0" layoutY="380.0" mnemonicParsing="false" prefHeight="57.0" prefWidth="130.0" styleClass="redButton" text="Criar">
+               <cursor>
+                  <Cursor fx:constant="OPEN_HAND" />
+               </cursor></Button>
+            <Text layoutX="238.0" layoutY="38.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="titleStd" text="Cadastrar Livro" textAlignment="CENTER" />
+            <TextField fx:id="isbnField" layoutX="203.0" layoutY="200.0" promptText="ISBN" styleClass="textfieldLightBox" />
+            <TextField fx:id="editionField" layoutX="203.0" layoutY="259.0" prefHeight="38.0" prefWidth="102.0" promptText="Edição" styleClass="textfieldLightBox" />
+            <TextField fx:id="qtdField" layoutX="317.0" layoutY="259.0" prefHeight="38.0" prefWidth="147.0" promptText="Quantidade" styleClass="textfieldLightBox" />
+         </children>
+      </Pane>
+    </children>
+
+</AnchorPane>

@@ -1,0 +1,229 @@
+.leftPane{
+    -fx-background-image: url("banner_bg.png");
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: left;
+
+    -fx-border-style: solid;
+    -fx-border-insets: none;
+    -fx-border-color: rgba(26,26,26,0.9);
+    -fx-border-width: 0 9px 0 0;
+}
+
+.rightPane{
+    -fx-background-color: #353535;
+}
+
+.tab{
+    -fx-background-radius: none;
+    -fx-background-insets: 0 1 0 1,0,0;
+}
+
+.tab-pane .tab-header-area .tab-header-background {
+    -fx-background-color: #353535;
+}
+
+.tab-pane .tab {
+    -fx-background-color: #3c3c3c;
+
+}
+
+.tab-pane .tab:selected {
+    -fx-background-color: #e6e6e6;
+}
+
+.tab .tab-label {
+    -fx-alignment: CENTER;
+    -fx-text-fill: #F5F5F5;
+    -fx-font-size: 12px;
+    -fx-font-weight: bold;
+}
+
+.tab:selected .tab-label {
+    -fx-alignment: CENTER;
+    -fx-text-fill: #828282;
+}
+
+
+#closeButton{
+    -fx-text-fill: rgba(26,26,26,0.9);
+    -fx-text-alignment: center;
+    -fx-font-size: 20px;
+    -fx-label-padding: 0 0 0 7px;
+}
+
+#closeButton:hover{
+    -fx-text-fill: #F44336;
+}
+
+.labelStd{
+    -fx-text-fill: #F5F5F5;
+}
+
+.comboBoxStd{
+    -fx-background-color: #e6e6e6;
+    -fx-background-radius: none;
+    -fx-font-size: 12px;
+    -fx-alignment: CENTER;
+    -fx-text-fill: #555555;
+    -fx-content-display: center;
+}
+
+.textfieldStd{
+    -fx-text-fill: #F5F5F5;
+    -fx-background-color: none;
+    -fx-border-style: solid;
+    -fx-border-width:0 0 2px 0;
+    -fx-border-color: #F5F5F5;
+}
+
+.textfieldStd:focused{
+    -fx-border-color: #82B1FF;
+}
+
+.redButton{
+    -fx-display-caret: true;
+    -fx-block-increment: inherit;
+    -fx-content-display: center;
+    -fx-background-radius: none;
+    -fx-background-color: #F44336;
+    -fx-border: none;
+    -fx-text-fill: #F5F5F5;
+    -fx-font-size: 20px;
+    -fx-alignment: center;
+}
+
+
+.blueButton{
+    -fx-background-radius: none;
+    -fx-alignment: center;
+    -fx-background-color: #82B1FF;
+    -fx-border: none;
+    -fx-text-fill: #F5F5F5;
+    -fx-font-size: 20px;
+}
+
+.greenButton{
+     -fx-background-radius: none;
+     -fx-alignment: center;
+     -fx-background-color: #4CAF50;
+     -fx-border: none;
+     -fx-text-fill: #F5F5F5;
+     -fx-font-size: 20px;
+ }
+
+.grayButton{
+    -fx-background-radius: none;
+    -fx-background-color: #BDBDBD;
+    -fx-border: none;
+    -fx-text-fill: #F5F5F5;
+    -fx-font-size: 20px;
+
+}
+
+
+.singupBG{
+    -fx-background-color: #353535;
+}
+
+.singupPane{
+    -fx-background-color: #F5F5F5;
+}
+
+.textfieldLightBox{
+    -fx-background-color: #FFFFFF;
+    -fx-background-radius: none;
+    -fx-font-size: 20px;
+    -fx-text-fill: #555555;
+    -fx-text-alignment: center;
+    -fx-content-display: center;
+}
+
+.textfieldLightBox:focused{
+    -fx-border-style: solid;
+    -fx-border-color: #82B1FF;
+    -fx-border-width: 0 0 2px 0;
+}
+
+.titleStd{
+    -fx-font-size: 25px;
+    -fx-text-alignment: center;
+}
+
+.profilePic{
+    -fx-background-color: #F5F5F5;
+    -fx-background-radius: 140px;
+}
+
+
+
+.profileTitle{
+    -fx-alignment: CENTER;
+    -fx-text-fill: #F5F5F5;
+    -fx-font-size: 12px;
+    -fx-font-weight: bold;
+}
+
+
+.profileSubTitle{
+    -fx-alignment: CENTER;
+    -fx-text-fill: #F5F5F5;
+    -fx-font-size: 12px;
+}
+
+#gridPane{
+    -fx-tile-alignment: center;
+    -fx-alignment: center;
+}
+
+.bookPane{
+    -fx-background-color: #e6e6e6;
+}
+
+.bookSubTitle{
+    -fx-alignment: center-left;
+    -fx-text-fill: #828282;
+    -fx-font-size: 12px;
+}
+
+.bookCod{
+    -fx-alignment: center-right;
+    -fx-text-fill: #828282;
+    -fx-font-size: 10px;
+}
+
+.warning{
+    -fx-background-color: #F44336;
+    -fx-background-radius: 5px;
+    -fx-alignment: CENTER;
+    -fx-text-fill: #F5F5F5;
+    -fx-font-size: 12px;
+    -fx-font-weight: bold;
+}
+
+.attention{
+    -fx-background-color: #FFC400;
+    -fx-background-radius: 5px;
+    -fx-alignment: CENTER;
+    -fx-text-fill: #F5F5F5;
+    -fx-font-size: 12px;
+    -fx-font-weight: bold;
+}
+
+.good{
+    -fx-background-color: #4CAF50;
+    -fx-background-radius: 5px;
+    -fx-alignment: CENTER;
+    -fx-text-fill: #F5F5F5;
+    -fx-font-size: 12px;
+    -fx-font-weight: bold;
+}
+
+.userRA{
+    -fx-alignment: CENTER;
+}
+
+.wizard{
+    visibility: hidden;
+}
+
+

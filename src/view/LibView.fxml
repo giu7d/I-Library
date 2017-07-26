@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import javafx.collections.*?>
+<?import java.lang.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.collections.FXCollections?>
+
+<AnchorPane prefHeight="480.0" prefWidth="800.0" stylesheets="@../assets/Style.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.LibViewController">
+   <children>
+      <Pane prefHeight="480.0" prefWidth="200.0" styleClass="singupBG">
+         <children>
+
+                                           <Label fx:id="closeButton" onMouseClicked="#closeAct" prefHeight="25.0" prefWidth="25.0" text="x">
+                 <cursor>
+                     <Cursor fx:constant="HAND" />
+                 </cursor>
+             </Label>
+            <Pane layoutX="28.0" layoutY="25.0" prefHeight="140.0" prefWidth="140.0" styleClass="profilePic" />
+            <Label fx:id="nameSession" layoutX="10.0" layoutY="187.0" prefHeight="15.0" prefWidth="180.0" styleClass="profileTitle" text="GIUSEPPE A S DAVANZO" textAlignment="CENTER" />
+            <Button fx:id="logoutButton" layoutY="430.0" mnemonicParsing="false" onMouseClicked="#logoutAct" prefHeight="50.0" prefWidth="200.0" styleClass="redButton" text="Sair">
+               <cursor>
+                  <Cursor fx:constant="OPEN_HAND" />
+               </cursor>
+            </Button>
+            <Label fx:id="emailSession" layoutX="8.0" layoutY="227.0" prefHeight="15.0" prefWidth="180.0" styleClass="profileSubTitle" text="giuseppe@alunos.utfpr.edu.br" />
+            <Label fx:id="admSession" layoutX="8.0" layoutY="248.0" prefHeight="15.0" prefWidth="180.0" styleClass="profileSubTitle" text="Aluno" />
+            <Label fx:id="raSession" layoutX="8.0" layoutY="268.0" prefHeight="15.0" prefWidth="180.0" styleClass="profileSubTitle" text="1868233" />
+            <Separator layoutX="14.0" layoutY="216.0" prefHeight="2.0" prefWidth="172.0" />
+         </children>
+      </Pane>
+      <TabPane layoutX="200.0" prefHeight="480.0" prefWidth="600.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab fx:id="myTab" styleClass="tab" text="Meus Livros">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <ScrollPane prefHeight="450.0" prefWidth="600.0">
+                           <content>
+                              <GridPane fx:id="mybooksPane" />
+                           </content>
+                        </ScrollPane>
+                     </children></AnchorPane>
+            </content>
+          </Tab>
+          <Tab fx:id="searchTab" text="Pesquisar Livros">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Pane prefHeight="40.0" prefWidth="600.0">
+                           <children>
+                              <TextField fx:id="bookSearchField" layoutX="39.0" prefHeight="40.0" prefWidth="401.0" promptText="Buscar" styleClass="textfieldLightBox" />
+                              <ComboBox fx:id="bookSearchBox" layoutX="440.0" prefHeight="40.0" prefWidth="120.0" promptText="Escolha..." styleClass="comboBoxStd">
+                                  <items>
+                                      <FXCollections fx:factory="observableArrayList">
+                                          <String fx:value="Título" />
+                                          <String fx:value="Autor" />
+                                          <String fx:value="ISBN" />
+                                          <String fx:value="Código" />
+                                      </FXCollections>
+                                  </items>
+                                  <value>
+                                      <String fx:value="Título" />
+                                  </value>
+                              </ComboBox>
+                              <Label fx:id="bookSearchButton" onMouseClicked="#bookSearchAct" layoutX="560.0" layoutY="-1.0" prefHeight="42.0" prefWidth="40.0" styleClass="blueButton" text="IR">
+                                 <cursor>
+                                    <Cursor fx:constant="OPEN_HAND" />
+                                 </cursor>
+                              </Label>
+                              <Label fx:id="addBookButton" onMouseClicked="#addBookAct" prefHeight="41.0" prefWidth="40.0" styleClass="greenButton" text="+">
+                                 <cursor>
+                                    <Cursor fx:constant="OPEN_HAND" />
+                                 </cursor>
+                              </Label>
+                           </children>
+                        </Pane>
+                        <ScrollPane layoutY="41.0" prefHeight="407.0" prefWidth="600.0">
+                           <content>
+                              <GridPane fx:id="booksPane" />
+                           </content>
+                        </ScrollPane>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+            <Tab fx:id="userTab" text="Usuarios" >
+               <content>
+                  <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                     <children>
+                        <Pane prefHeight="40.0" prefWidth="600.0">
+                           <children>
+                              <TextField layoutX="40.0" prefHeight="40.0" prefWidth="400.0" promptText="Buscar" styleClass="textfieldLightBox" />
+                              <ComboBox layoutX="440.0" prefHeight="40.0" prefWidth="120.0" promptText="Escolha..." styleClass="comboBoxStd">
+                                 <items>
+                                    <FXCollections fx:factory="observableArrayList">
+                                       <String fx:value="RA" />
+                                       <String fx:value="Nome" />
+                                       <String fx:value="Curso" />
+                                       <String fx:value="Estado" />
+                                    </FXCollections>
+                                 </items>
+                                  <value>
+                                      <String fx:value="RA" />
+                                  </value>
+                              </ComboBox>
+                              <Label layoutX="560.0" layoutY="-1.0" prefHeight="42.0" prefWidth="40.0" styleClass="blueButton" text="IR">
+                                 <cursor>
+                                    <Cursor fx:constant="OPEN_HAND" />
+                                 </cursor>
+                              </Label>
+                              <Label fx:id="addUserButton" onMouseClicked="#addUserAct" prefHeight="42.0" prefWidth="40.0" styleClass="greenButton" text="+">
+                                 <cursor>
+                                    <Cursor fx:constant="OPEN_HAND" />
+                                 </cursor>
+                              </Label>
+                           </children>
+                        </Pane>
+                        <ScrollPane layoutY="41.0" prefHeight="405.0" prefWidth="600.0" AnchorPane.bottomAnchor="1.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="41.0">
+                           <content>
+                              <GridPane fx:id="usersPane" prefWidth="580.0"> </GridPane>
+                           </content>
+                        </ScrollPane>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+            <Tab fx:id="takeTab" text="Emprestimos">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Pane prefHeight="40.0" prefWidth="600.0">
+                           <children>
+                              <TextField layoutX="40.0" prefHeight="40.0" prefWidth="400.0" promptText="Buscar" styleClass="textfieldLightBox" />
+                              <ComboBox layoutX="440.0" prefHeight="40.0" prefWidth="120.0" promptText="Escolha..." styleClass="comboBoxStd">
+                                 <items>
+                                    <FXCollections fx:factory="observableArrayList">
+                                       <String fx:value="Id. Emprestimo" />
+                                       <String fx:value="Nome Aluno" />
+                                       <String fx:value="Titulo Livro" />
+                                       <String fx:value="Estado do Emprestimo" />
+                                    </FXCollections>
+                                 </items>
+                                  <value>
+                                      <String fx:value="Id. Emprestimo" />
+                                  </value>
+                              </ComboBox>
+                              <Label layoutX="560.0" layoutY="-1.0" prefHeight="42.0" prefWidth="40.0" styleClass="blueButton" text="IR">
+                                 <cursor>
+                                    <Cursor fx:constant="OPEN_HAND" />
+                                 </cursor>
+                              </Label>
+                              <Label  fx:id="addTakeButton" onMouseClicked="#addTakeAct" prefHeight="42.0" prefWidth="40.0" styleClass="greenButton" text="+">
+                                 <cursor>
+                                    <Cursor fx:constant="OPEN_HAND" />
+                                 </cursor>
+                              </Label>
+                           </children>
+                        </Pane>
+                        <ScrollPane layoutY="41.0" prefHeight="406.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="41.0">
+                           <content>
+                              <GridPane fx:id="takesPane" prefWidth="550.0"> </GridPane>
+                           </content>
+                        </ScrollPane>
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+
+
+</AnchorPane>
